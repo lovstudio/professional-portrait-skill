@@ -1,0 +1,11 @@
+name: Validate skill
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  validate:
+    uses: lovstudio/dev-skills/.github/workflows/validate-skill.yml@main
+    with:
+      skill_name: lovstudio-professional-portrait
