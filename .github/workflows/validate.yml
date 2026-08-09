@@ -8,4 +8,4 @@ jobs:
   validate:
     uses: lovstudio/dev-skills/.github/workflows/validate-skill.yml@main
     with:
-      skill_name: lovstudio-professional-portrait
+      skill_name: sgc-professional-portrait
