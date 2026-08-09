@@ -6,6 +6,6 @@ on:
 
 jobs:
   validate:
-    uses: lovstudio/dev-skills/.github/workflows/validate-skill.yml@main
+    uses: skill-publisher/dev-skills/.github/workflows/validate-skill.yml@main
     with:
       skill_name: sgc-professional-portrait
