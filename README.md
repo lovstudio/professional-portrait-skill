@@ -1,4 +1,4 @@
-# sgc-professional-portrait
+# lov-professional-portrait
 
 ![Version](https://img.shields.io/badge/version-0.1.1-CC785C)
 
@@ -27,7 +27,7 @@ npx skills add professional-portrait
 
 ```bash
 git clone https://example.com/skills/professional-portrait-skill \
-  "${SKILL_SKILLS_INSTALL_DIR:?Set SKILL_SKILLS_INSTALL_DIR}/sgc-professional-portrait"
+  "${SKILL_SKILLS_INSTALL_DIR:?Set SKILL_SKILLS_INSTALL_DIR}/lov-professional-portrait"
 ```
 
 ## 使用
