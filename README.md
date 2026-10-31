@@ -23,6 +23,13 @@ Independent source repository, also distributed through [lovstudio/skills](https
 npx skills add lov-professional-portrait -g -y
 ```
 
+或使用 Claude Code 插件市场：
+
+```text
+/plugin marketplace add lovstudio/skills
+/plugin install design@lovstudio
+```
+
 也可以直接从源码安装：
 
 ```bash
