@@ -2,10 +2,30 @@ name: Validate skill
 
 on:
   push:
+    branches: [main]
+    tags: ["v*"]
   pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  # lov-skill-creator's validator, pinned to a commit so new upstream rules
+  # reach this repo only when the pin is bumped.
+  VALIDATOR_URL: https://raw.githubusercontent.com/lovstudio/skill-creator-skill/976fb6137ba4fc32d855f689ec4459d4aed8b5fe/scripts/validate_skill.py
 
 jobs:
   validate:
-    uses: skill-publisher/dev-skills/.github/workflows/validate-skill.yml@main
-    with:
-      skill_name: lov-professional-portrait
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+      - name: Install validator dependency
+        run: python -m pip install --disable-pip-version-check pyyaml
+      - name: Validate skill structure
+        run: |
+          curl -fsSL --retry 3 "$VALIDATOR_URL" -o "$RUNNER_TEMP/validate_skill.py"
+          python "$RUNNER_TEMP/validate_skill.py" .
