@@ -1,6 +1,6 @@
 # 职业形象照 · Professional Portrait
 
-![Version](https://img.shields.io/badge/version-0.2.3-CC785C)
+![Version](https://img.shields.io/badge/version-0.2.4-CC785C)
 
 把一张普通人像修成干净、自然、仍然像本人的职业形象照。
 
@@ -20,7 +20,7 @@ Independent source repository, also distributed through [lovstudio/skills](https
 ## 安装
 
 ```bash
-npx skills add lov-professional-portrait -g -y
+npx lovstudio skills add professional-portrait -g -y
 ```
 
 或使用 Claude Code 插件市场：
